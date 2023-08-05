@@ -1,13 +1,14 @@
 import logo from '../assets/logo.jpg';
+import { Link } from 'react-router-dom';
 
 const Navbar = () =>
       <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
-        <a className="navbar-brand" href="#">
+        <Link to="/" className="navbar-brand">
           <img className="logo" src={logo} alt="nav logo" />
-        </a>
+        </Link>
         <div className="collapse navbar-collapse flex-grow-0" id="navbarTogglerDemo03">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item">

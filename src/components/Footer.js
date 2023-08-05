@@ -4,7 +4,7 @@ import paypal from '../assets/paypal.png';
 import bitcoin from '../assets/bitcoin.png';
 
 const Footer = () =>
-  <footer id="Footer" className="row text-light bg-success">
+  <footer id="Footer" className="d-flex flex-wrap text-light bg-success">
     <div className="col-sm-7">
       <p>© 2023 Productos artesanales naturales | <b>Mi Eco-Tiendita</b><small className="d-block">Todos los derechos reservados.</small></p>
       <small className>Desarrollado por <a href="https://jalfredev.com" className="dev" target="_blank" rel="noreferrer"> JAlfreDev</a></small>

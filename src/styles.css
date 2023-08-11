@@ -170,6 +170,14 @@
   width: 32px;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.core {
+  flex-grow: 1;
+}
 #error-page {
   display: flex;
   flex-direction: column;
@@ -233,13 +241,5 @@
   }
   #Footer {
     min-height: 146px;
-  }
-  #root {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
-  .core {
-    flex-grow: 1;
   }
 }

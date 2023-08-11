@@ -11,22 +11,22 @@ const Navbar = () =>
         </Link>
         <div className="collapse navbar-collapse flex-grow-0" id="navbarTogglerDemo03">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li className="nav-item">
+            <li className="nav-item" key="li1">
               <a className="nav-link" href="#Section4">Catálogo<span className="sr-only">(current)</span></a>
             </li>
-            <li className="nav-item dropdown">
+            <li className="nav-item dropdown" key="li2">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Productos
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a className="dropdown-item" href="#">Jabones</a>
-                <a className="dropdown-item" href="#">Shampoos</a>
-                <a className="dropdown-item" href="#">Velas</a>
-                <a className="dropdown-item" href="#">Cremas y Balsamos</a>
-                <a className="dropdown-item" href="#">Materiales</a>
+                <Link className="dropdown-item" to="/jabones">Jabones</Link>
+                <Link className="dropdown-item" to="#">Shampoos</Link>
+                <Link className="dropdown-item" to="#">Velas</Link>
+                <Link className="dropdown-item" to="#">Cremas y Balsamos</Link>
+                <Link className="dropdown-item" to="#">Materiales</Link>
               </div>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" key="li3">
               <a className="nav-link" href="#Section5">Contacto</a>
             </li>
           </ul>

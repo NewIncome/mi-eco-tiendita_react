@@ -5,21 +5,25 @@ const Jabones = props => {
   
   return (
     <>
-      <h2 className="prods-title text-center">
+      <h2 className="prods-title text-center mb-5">
         <b>Ja</b><b className="h-line">bon</b><b>es</b>
       </h2>
-      {jabones.map(prod => (
-        <Link to={`/jabones/${prod.name}`} className="Product-link" key={`key-${prod.name}`}>
-          <div className="Product">
-            <div className="prod-frame">
-              <img src="../assets/var-05.jpg" alt="" className="prod-img" />
-            </div>
-            <div className="prod-title">
-              <h5 className="prod-name">{prod.name}</h5> - <p className="price">{prod.price}</p>
-            </div>
-          </div>
-        </Link>
-      ))}
+      <div className="products d-flex justify-content-center">
+        <ul className="ul-box d-flex flex-wrap p-0">
+          {jabones.map(prod => (
+            <li className="product card" key={`key-${prod.name}`}>
+              <Link to={`/jabones/${prod.name}`} className="product-link card-body pb-0">
+                <div className="prod-frame d-flex justify-content-center">
+                  <img src={prod.img} alt="" className="prod-img w-100" />
+                </div>
+                <div className="prod-info text-center">
+                  <h5 className="prod-name">{prod.name}<span className='p-line'>&#x2015;</span><span className="price">$ {prod.price}</span></h5>
+                </div>
+              </Link>
+            </li>
+            ))}
+        </ul>
+      </div>
     </>
   );
 }

@@ -5,7 +5,7 @@ const Jabones = props => {
   
   return (
     <>
-      <h2 className="prods-title text-center mb-5">
+      <h2 className="prods-title text-center mb-5 pt-3">
         <b>Ja</b><b className="h-line">bon</b><b>es</b>
       </h2>
       <div className="products d-flex justify-content-center">

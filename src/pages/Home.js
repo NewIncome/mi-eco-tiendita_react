@@ -2,6 +2,7 @@ import logo from '../assets/logo.jpg';
 import facebook from '../assets/facebook-ico.png';
 import instagram from '../assets/instagram-ico.png';
 import youtube from '../assets/youtube-ico.png';
+import { Link } from 'react-router-dom';
 
 const Home = () =>
   <>
@@ -66,31 +67,31 @@ const Home = () =>
         <b>Cat</b><b className="h-line">egor</b><b>ías</b>
       </h1>
       <div className="row align-content-between justify-content-between">
-        <div className="cs c1 card col-12">
-          <div className="card-body v-center">
-            <h3 className="card-title h2 text-center">Jabones</h3>
-          </div>
-        </div>
-        <div className="cs c2 card">
+        <Link className="cs c1 card col-12" to="/jabones">
+            <div className="card-body v-center">
+              <h3 className="card-title h2 text-center">Jabones</h3>
+            </div>
+        </Link>
+        <Link className="cs c2 card" to="#">
           <div className="card-body v-center">
             <h3 className="card-title h2 text-center">Shampoos</h3>
           </div>
-        </div>
-        <div className="cs c3 card">
+        </Link>
+        <Link className="cs c3 card" to="#">
           <div className="card-body v-center">
             <h3 className="card-title h2 text-center">Velas</h3>
           </div>
-        </div>
-        <div className="cs c4 card">
+        </Link>
+        <Link className="cs c4 card" to="#">
           <div className="card-body v-center">
             <h3 className="card-title h2 text-center">Cremas &amp; Balsamos</h3>
           </div>
-        </div>
-        <div className="cs c5 card">
+        </Link>
+        <Link className="cs c5 card" to="#">
           <div className="card-body v-center">
             <h3 className="card-title h2 text-center">Materiales</h3>
           </div>
-        </div>
+        </Link>
       </div>
     </section>
     {/* ----- Section 4 - Catálogo ----- */}

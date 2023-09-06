@@ -1,5 +1,5 @@
 .navbar {
-  height: 80px;
+  min-height: 80px;
 
   .logo {
     width: 56px;
@@ -47,6 +47,7 @@
 }
 #Section3 .cs:hover {
   opacity: 0.9;
+  text-decoration: none;
 }
 #Section3 .c1 {
   background: no-repeat 6% 12%/105% url(assets/var-03.jpeg);

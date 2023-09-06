@@ -12,7 +12,7 @@ const Jabones = props => {
         <ul className="ul-box d-flex flex-wrap p-0">
           {jabones.map(prod => (
             <li className="product card" key={`key-${prod.name}`}>
-              <Link to={`/jabones/${prod.name}`} className="product-link card-body pb-0">
+              <Link to={`/jabones/${prod.path}`} className="product-link card-body pb-0">
                 <div className="prod-frame d-flex justify-content-center">
                   <img src={prod.img} alt="" className="prod-img w-100" />
                 </div>

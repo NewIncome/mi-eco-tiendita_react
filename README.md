@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Future upgrades
+En '/product'
+- Agregar multiples imagenes x producto
+- Links compartir en redes sociales x producto
+- Seccion: tambien te puede interesar, antes del footer
+
 ## Available Scripts
 
 In the project directory, you can run:

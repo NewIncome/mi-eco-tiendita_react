@@ -25,7 +25,7 @@ const Footer = () =>
           <img src={bitcoin} alt="bitcoin" className="cards bc-c" />
         </div>
       </div>
-      <div className="attribute h-50">
+      <div className="attribute">
         <a href="https://www.flaticon.com/free-icons/instagram" title="instagram icons" target="_blank" rel="noreferrer">Icons created by Freepik - Flaticon</a>
       </div>
     </div>

@@ -2,6 +2,7 @@ import logo from '../assets/logo.jpg';
 import facebook from '../assets/facebook-ico.png';
 import instagram from '../assets/instagram-ico.png';
 import youtube from '../assets/youtube-ico.png';
+import { Link } from 'react-router-dom';
 
 const Home = () =>
   <>
@@ -9,8 +10,8 @@ const Home = () =>
     <section id="Section1">
       <div id="myCarousel" className="carousel slide" data-ride="carousel">
         <ol className="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to={0} className />
-          <li data-target="#myCarousel" data-slide-to={1} className />
+          <li data-target="#myCarousel" data-slide-to={0} className="" />
+          <li data-target="#myCarousel" data-slide-to={1} className="" />
           <li data-target="#myCarousel" data-slide-to={2} className="active" />
         </ol>
         <div className="carousel-inner">
@@ -56,9 +57,9 @@ const Home = () =>
       </div>
     </section>
     {/* ----- Section 2 - Nosotros ----- */}
-    <section id="Section2" className>
+    <section id="Section2" className="">
       <h2 className="pb-4">¿Quienes somos?</h2>
-      <p className>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </section>
     {/* ----- Section 3 - Categorías ----- */}
     <section id="Section3" className="container vh-100 d-flex flex-column px-5">
@@ -66,44 +67,44 @@ const Home = () =>
         <b>Cat</b><b className="h-line">egor</b><b>ías</b>
       </h1>
       <div className="row align-content-between justify-content-between">
-        <div className="cs c1 card col-12">
-          <div className="card-body v-center">
-            <h3 className="card-title h2 text-center">Jabones</h3>
-          </div>
-        </div>
-        <div className="cs c2 card">
+        <Link className="cs c1 card col-12" to="/jabones">
+            <div className="card-body v-center">
+              <h3 className="card-title h2 text-center">Jabones</h3>
+            </div>
+        </Link>
+        <Link className="cs c2 card" to="#">
           <div className="card-body v-center">
             <h3 className="card-title h2 text-center">Shampoos</h3>
           </div>
-        </div>
-        <div className="cs c3 card">
+        </Link>
+        <Link className="cs c3 card" to="#">
           <div className="card-body v-center">
             <h3 className="card-title h2 text-center">Velas</h3>
           </div>
-        </div>
-        <div className="cs c4 card">
+        </Link>
+        <Link className="cs c4 card" to="#">
           <div className="card-body v-center">
             <h3 className="card-title h2 text-center">Cremas &amp; Balsamos</h3>
           </div>
-        </div>
-        <div className="cs c5 card">
+        </Link>
+        <Link className="cs c5 card" to="#">
           <div className="card-body v-center">
             <h3 className="card-title h2 text-center">Materiales</h3>
           </div>
-        </div>
+        </Link>
       </div>
     </section>
     {/* ----- Section 4 - Catálogo ----- */}
-    <section id="Section4" className>
+    <section id="Section4" className="">
       <h1 className="pb-4">
         <b>Ca</b><b className="h-line">tálo</b><b>go</b>
       </h1>
       <div className="rt">
-        <p className>Si deseas descargar nuestro catálogo de productos da clic en el siguiente botón</p>
+        <p className="">Si deseas descargar nuestro catálogo de productos da clic en el siguiente botón</p>
         <button type="button" className="dwnld btn btn-warning pb-2 mb-3">
           Descargar Catálogo
         </button>
-        <p className>o si solo quieres visualizarlo te lo mostramos a continuación(próximamente)</p>
+        <p className="">o si solo quieres visualizarlo te lo mostramos a continuación(próximamente)</p>
       </div>
     </section>
     {/* ----- Section 5 - Contacto ----- */}

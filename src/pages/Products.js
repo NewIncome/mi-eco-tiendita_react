@@ -1,18 +1,23 @@
 import { Link } from 'react-router-dom';
+import { caps_first_letter } from '../utils';
 
-const Jabones = props => {
-  const jabones = props.jabones;
+const Products = props => {
+  const [products, title] = [props.products, props.title];
   
   return (
     <>
       <h2 className="prods-title text-center mb-5 pt-3">
-        <b>Ja</b><b className="h-line">bon</b><b>es</b>
+        <b>{caps_first_letter(title)}</b>
+        <hr className="h-line bar" />
       </h2>
       <div className="products d-flex justify-content-center">
         <ul className="ul-box d-flex flex-wrap p-0">
-          {jabones.map(prod => (
+          {products.map(prod => (
             <li className="product card" key={`key-${prod.name}`}>
-              <Link to={`/jabones/${prod.path}`} className="product-link card-body pb-0">
+              <Link
+                to={`/${title}/${prod.path}`}
+                className="product-link card-body pb-0"
+              >
                 <div className="prod-frame d-flex justify-content-center">
                   <img src={prod.img} alt="" className="prod-img w-100" />
                 </div>
@@ -28,4 +33,4 @@ const Jabones = props => {
   );
 }
 
-export default Jabones;
+export default Products;

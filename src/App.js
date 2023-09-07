@@ -3,10 +3,10 @@ import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
 import Jabones from './pages/Jabones';
 import Product from './components/Product';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import getProductsList from './products';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     element: <Main />,
     errorElement: <ErrorPage />,
@@ -21,11 +21,11 @@ const router = createBrowserRouter([
         children: []
       },
       {
-        path: '/jabones/:prodName',
+        path: '/jabones/:prodPath',
         element: <Product />,
-        loader: async ({ params }) => {
-          return getProductsList('jabones').filter(e => e.name == params.prodName)[0];
-        }
+        loader: async ({ params }) => 
+                        getProductsList('jabones')
+                        .filter(e => e.path == params.prodPath)[0]
       }/*,
       {
         path: 'velas',

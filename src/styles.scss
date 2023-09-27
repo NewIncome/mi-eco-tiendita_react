@@ -303,6 +303,12 @@
   max-width: 380px;
 }
 
+.bar {
+  width: 50px;
+  border-bottom: 1px solid #444;
+  border-top: none;
+}
+
 // img: Max-wigth 440px
 .Product {
   margin: auto;
@@ -315,12 +321,6 @@
   .product-info {
     .product-name {
       margin-bottom: 12px;
-    }
-
-    .bar {
-      width: 50px;
-      border-bottom: 1px solid #444;
-      border-top: none;
     }
 
     .product-description {

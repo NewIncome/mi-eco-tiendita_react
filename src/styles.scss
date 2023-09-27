@@ -221,7 +221,7 @@
 }
 @media screen and (min-width: 576px) {
   .navbar {
-    height: 110px !important;
+    min-height: 110px !important;
 
     .logo {
       width: 80px;
@@ -303,6 +303,12 @@
   max-width: 380px;
 }
 
+.bar {
+  width: 50px;
+  border-bottom: 1px solid #444;
+  border-top: none;
+}
+
 // img: Max-wigth 440px
 .Product {
   margin: auto;
@@ -315,12 +321,6 @@
   .product-info {
     .product-name {
       margin-bottom: 12px;
-    }
-
-    .bar {
-      width: 50px;
-      border-bottom: 1px solid #444;
-      border-top: none;
     }
 
     .product-description {
@@ -341,11 +341,15 @@
 
       .social-share-link {
         color: #1f2021;
-        font-size: 0.7rem;
+        font-size: 0.7rem !important;
         margin-bottom: 2px;
   
         &:hover {
           text-decoration: none;
+        }
+
+        &:focus {
+          outline: none !important;
         }
   
         .social-share-ico {

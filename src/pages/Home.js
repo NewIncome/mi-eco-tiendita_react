@@ -72,22 +72,22 @@ const Home = () =>
               <h3 className="card-title h2 text-center">Jabones</h3>
             </div>
         </Link>
-        <Link className="cs c2 card" to="#">
+        <Link className="cs c2 card" to="/shampoos">
           <div className="card-body v-center">
             <h3 className="card-title h2 text-center">Shampoos</h3>
           </div>
         </Link>
-        <Link className="cs c3 card" to="#">
+        <Link className="cs c3 card" to="/velas">
           <div className="card-body v-center">
             <h3 className="card-title h2 text-center">Velas</h3>
           </div>
         </Link>
-        <Link className="cs c4 card" to="#">
+        <Link className="cs c4 card" to="/balsamos">
           <div className="card-body v-center">
             <h3 className="card-title h2 text-center">Cremas &amp; Balsamos</h3>
           </div>
         </Link>
-        <Link className="cs c5 card" to="#">
+        <Link className="cs c5 card" to="/materiales">
           <div className="card-body v-center">
             <h3 className="card-title h2 text-center">Materiales</h3>
           </div>

@@ -3,9 +3,28 @@ import jabon from './assets/var-03.jpeg';
 import balsamo from './assets/var-04.jpeg';
 import vela from './assets/var-05.jpg';
 import shampoo from './assets/var-07.jpg';
-import { pathname_fix } from './utils';
+import { pathname_fix, randomNum } from './utils';
 
 const getProductsList = type => products[type];
+
+const getRandomProd = () => {
+  const PRODS = ['jabones', 'shampoos', 'velas', 'balsamos', 'materiales'];
+  let category = PRODS[randomNum(5)];
+
+  return products[category][randomNum(3)];
+}
+
+const getProdsRandom = prod => {
+  const randoms = [];
+
+  for(let n=1; n<=4; n++) {
+   let newProd = getRandomProd();
+   while(randoms.includes(newProd) || newProd == prod) newProd = getRandomProd();
+   randoms.push(newProd);
+  }
+
+  return randoms;
+}
 
 const lorem_description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 
@@ -13,6 +32,7 @@ const products = {
   'jabones': [
     {
       name: 'Jabón 1',
+      type: 'jabones',
       img: jabon,
       price: 50.00,
       description: ['Ésta es la descripción del jabón no.1'+lorem_description, lorem_description],
@@ -20,6 +40,7 @@ const products = {
     },
     {
       name: 'Jabón 2',
+      type: 'jabones',
       img: jabon,
       price: 50.00,
       description: ['Ésta es la descripción del jabón no.2'+lorem_description, lorem_description],
@@ -27,6 +48,7 @@ const products = {
     },
     {
       name: 'Jabón 3',
+      type: 'jabones',
       img: jabon,
       price: 50.00,
       description: ['Ésta es la descripción del jabón no.3'+lorem_description, lorem_description],
@@ -36,6 +58,7 @@ const products = {
   'shampoos': [
     {
       name: 'Shampoo 1',
+      type: 'shampoos',
       img: shampoo,
       price: 100.00,
       description: ['Ésta es la descripción del shampoo no.1'+lorem_description, lorem_description],
@@ -43,6 +66,7 @@ const products = {
     },
     {
       name: 'Shampoo 2',
+      type: 'shampoos',
       img: shampoo,
       price: 100.00,
       description: ['Ésta es la descripción del shampoo no.2'+lorem_description, lorem_description],
@@ -50,6 +74,7 @@ const products = {
     },
     {
       name: 'Shampoo 3',
+      type: 'shampoos',
       img: shampoo,
       price: 100.00,
       description: ['Ésta es la descripción del shampoo no.3'+lorem_description, lorem_description],
@@ -59,6 +84,7 @@ const products = {
   'velas': [
     {
       name: 'Vela 1',
+      type: 'velas',
       img: vela,
       price: 65.00,
       description: ['Ésta es la descripción del vela no.1'+lorem_description, lorem_description],
@@ -66,6 +92,7 @@ const products = {
     },
     {
       name: 'Vela 2',
+      type: 'velas',
       img: vela,
       price: 65.00,
       description: ['Ésta es la descripción del vela no.2'+lorem_description, lorem_description],
@@ -73,6 +100,7 @@ const products = {
     },
     {
       name: 'Vela 3',
+      type: 'velas',
       img: vela,
       price: 65.00,
       description: ['Ésta es la descripción del vela no.3'+lorem_description, lorem_description],
@@ -82,6 +110,7 @@ const products = {
   'balsamos': [
     {
       name: 'Balsamo 1',
+      type: 'balsamos',
       img: balsamo,
       price: 105.00,
       description: ['Ésta es la descripción del balsamo no.1'+lorem_description, lorem_description],
@@ -89,6 +118,7 @@ const products = {
     },
     {
       name: 'Balsamo 2',
+      type: 'balsamos',
       img: balsamo,
       price: 105.00,
       description: ['Ésta es la descripción del balsamo no.2'+lorem_description, lorem_description],
@@ -96,6 +126,7 @@ const products = {
     },
     {
       name: 'Balsamo 3',
+      type: 'balsamos',
       img: balsamo,
       price: 105.00,
       description: ['Ésta es la descripción del balsamo no.3'+lorem_description, lorem_description],
@@ -105,6 +136,7 @@ const products = {
   'materiales': [
     {
       name: 'Material 1',
+      type: 'materiales',
       img: material,
       price: 80.00,
       description: ['Ésta es la descripción del material no.1'+lorem_description, lorem_description],
@@ -112,6 +144,7 @@ const products = {
     },
     {
       name: 'Material 2',
+      type: 'materiales',
       img: material,
       price: 80.00,
       description: ['Ésta es la descripción del material no.2'+lorem_description, lorem_description],
@@ -119,6 +152,7 @@ const products = {
     },
     {
       name: 'Material 3',
+      type: 'materiales',
       img: material,
       price: 80.00,
       description: ['Ésta es la descripción del material no.3'+lorem_description, lorem_description],
@@ -127,4 +161,4 @@ const products = {
   ]
 };
 
-export default getProductsList;
+export { getProductsList, getProdsRandom };

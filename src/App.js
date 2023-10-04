@@ -4,7 +4,7 @@ import ErrorPage from './pages/ErrorPage';
 import Products from './pages/Products';
 import Product from './components/Product';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
-import getProductsList from './products';
+import { getProductsList, getProdsRandom } from './products';
 
 const router = createHashRouter([
   {
@@ -22,9 +22,11 @@ const router = createHashRouter([
       {
         path: '/jabones/:prodPath',
         element: <Product />,
-        loader: async ({ params }) => 
-                        getProductsList('jabones')
-                        .filter(e => e.path == params.prodPath)[0]
+        loader: async ({ params }) => {
+          let product = getProductsList('jabones')
+          .filter(e => e.path == params.prodPath)[0];
+          return [product, getProdsRandom(product)];
+        }
       },
       {
         path: '/shampoos',
@@ -33,9 +35,11 @@ const router = createHashRouter([
       {
         path: '/shampoos/:prodPath',
         element: <Product />,
-        loader: async ({ params }) => 
-                        getProductsList('shampoos')
-                        .filter(e => e.path == params.prodPath)[0]
+        loader: async ({ params }) => {
+          let product = getProductsList('shampoos')
+          .filter(e => e.path == params.prodPath)[0];
+          return [product, getProdsRandom(product)];
+        }
       },
       {
         path: '/velas',
@@ -44,9 +48,11 @@ const router = createHashRouter([
       {
         path: '/velas/:prodPath',
         element: <Product />,
-        loader: async ({ params }) => 
-                        getProductsList('velas')
-                        .filter(e => e.path == params.prodPath)[0]
+        loader: async ({ params }) => {
+          let product = getProductsList('velas')
+          .filter(e => e.path == params.prodPath)[0];
+          return [product, getProdsRandom(product)];
+        }
       },
       {
         path: '/balsamos',
@@ -55,9 +61,11 @@ const router = createHashRouter([
       {
         path: '/balsamos/:prodPath',
         element: <Product />,
-        loader: async ({ params }) => 
-                        getProductsList('balsamos')
-                        .filter(e => e.path == params.prodPath)[0]
+        loader: async ({ params }) => {
+          let product = getProductsList('balsamos')
+          .filter(e => e.path == params.prodPath)[0];
+          return [product, getProdsRandom(product)];
+        }
       },
       {
         path: '/materiales',
@@ -66,9 +74,11 @@ const router = createHashRouter([
       {
         path: '/materiales/:prodPath',
         element: <Product />,
-        loader: async ({ params }) => 
-                        getProductsList('materiales')
-                        .filter(e => e.path == params.prodPath)[0]
+        loader: async ({ params }) => {
+          let product = getProductsList('materiales')
+          .filter(e => e.path == params.prodPath)[0];
+          return [product, getProdsRandom(product)];
+        }
       }
     ]
   }

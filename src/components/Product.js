@@ -7,11 +7,13 @@ import {
   TwitterShareButton,
   PinterestShareButton
 } from "react-share";
+import { Link } from 'react-router-dom';
 
-const Product = () => {
-  const prod = useLoaderData();
+const Product = props => {
+  const [prod, alsoProds] = useLoaderData();
 
   return (
+      <>
         <div className="Product ul-box d-sm-flex justify-content-center py-2">
           <div className="product-frame d-flex justify-content-center col-sm-6 col-sm-6">
             <img src={prod.img} alt="" className="product-img w-100" />
@@ -31,21 +33,16 @@ const Product = () => {
             </ul>
             <div className="row mt-4 justify-content-center">
               <ul className="social-share list-unstyled d-flex flex-wrap w-75">
-                <li>{/*<a className="facebook social-share-link" title="Facebook-share" href={`https://www.facebook.com/sharer.php?u=${window.location.href}`} target="_blank" rel="noreferrer noopener">
-                  <img className="social-share-ico" src={facebook} alt="facebook share link" />
-                  <span className="social-text">Compartir</span>
-              </a>*/}
+                <li>
                 <FacebookShareButton
                   media={window.location.hostname+prod.img}
                   url={window.location.href}
                   className="Demo__some-network__share-button facebook social-share-link"
                 >
-                  {console.log('PATH')}
-                  {console.log(window.location.hostname+prod.img)}
                   <img className="social-share-ico" src={facebook} alt="facebook share link" />
                   <span className="social-text">Compartir</span>
                 </FacebookShareButton></li>
-                <li>{/*<a className="twitter social-share-link" title="Twitter-share" href={`https://twitter.com/share?text=${encodeURIComponent(prod.name)}&url=${window.location.href}`} target="_blank" rel="noreferrer noopener">*/}
+                <li>
                 <TwitterShareButton
                   media={window.location.hostname+prod.img}
                   url={window.location.href}
@@ -54,7 +51,7 @@ const Product = () => {
                   <img className="social-share-ico" src={twitter} alt="twitter share link" />
                   <span className="social-text">Tuitear</span>
                 </TwitterShareButton></li>
-                <li>{/*<a className="pinterest social-share-link" title="Pinterest-share" href={`https://pinterest.com/pin/create/button/?url=${window.location.href}&media=//${window.location.origin+encodeURIComponent(prod.img)}?v=1637340429&description=${encodeURIComponent(prod.name)}`} target="_blank" rel="noreferrer noopener">*/}
+                <li>
                 <PinterestShareButton
                   media={window.location.hostname+prod.img}
                   description={prod.description}
@@ -68,6 +65,33 @@ const Product = () => {
             </div>
           </div>
         </div>
+
+        <div className="tambien">
+          <h2 className="also-prods-title text-center mb-5 pt-5">
+            <b>También te puede interesar</b>
+            <hr className="h-line bar" />
+          </h2>
+          <div className="prods-container d-flex justify-content-center">
+            <ul className="ul-box d-flex flex-wrap p-0">
+              {alsoProds.map(prod => (
+                <li className="also-prod card" key={`key-${prod.name}`}>
+                  <Link
+                    to={`/${prod.type}/${prod.path}`}
+                    className="also-prod-link card-body pb-0"
+                  >
+                    <div className="also-prod-frame d-flex justify-content-center">
+                      <img src={prod.img} alt="" className="also-prod-img w-100" />
+                    </div>
+                    <div className="also-prod-info text-center">
+                      <h5 className="also-prod-name">{prod.name}<span className='p-line'>&#x2015;</span><span className="price">$ {prod.price}</span></h5>
+                    </div>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </>
   );
 }
 

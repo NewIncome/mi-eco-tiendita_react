@@ -412,7 +412,30 @@
   .whats-img { width: 50px; }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 390px) {
+  .cs {
+    .card-title {
+      font-size: 7vw !important;
+    }
+  }
+
+  #Section2, #Section4 {
+    padding: 50px 20px 80px;
+  }
+
+  #Section3 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  #Section5 {
+    .contacto { padding: 10px 0 30px !important; }
+  }
+
+  .also-prod-name {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -421,11 +444,16 @@
   }
 
   .also-prod { width: calc((100% - (20px*4)) / 4) !important; }
+
+  .also-prods-title { padding-top: 4rem !important; }
+
+  .whatsapp { margin: 50px; }
 }
 
 @media screen and (max-width: 768px) {
   .also-prod { width: calc((100% - 40px) / 2); }
 }
 
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 576px) {
+  .whatsapp { margin: 50px; }
 }

@@ -5,13 +5,13 @@ import vela from './assets/var-05.jpg';
 import shampoo from './assets/var-07.jpg';
 import { pathname_fix, randomNum } from './utils';
 
-const getProductsList = type => products[type];
+const getProductsList = type => PRODUCTS[type];
 
 const getRandomProd = () => {
   const PRODS = ['jabones', 'shampoos', 'velas', 'balsamos', 'materiales'];
   let category = PRODS[randomNum(5)];
 
-  return products[category][randomNum(3)];
+  return PRODUCTS[category][randomNum(3)];
 }
 
 const getProdsRandom = prod => {
@@ -28,7 +28,7 @@ const getProdsRandom = prod => {
 
 const lorem_description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 
-const products = {
+const PRODUCTS = {
   'jabones': [
     {
       name: 'Jabón 1',
@@ -161,4 +161,4 @@ const products = {
   ]
 };
 
-export { getProductsList, getProdsRandom };
+export { getProductsList, getProdsRandom, PRODUCTS };

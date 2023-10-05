@@ -6,7 +6,7 @@ const Products = props => {
   
   return (
     <>
-      <h2 className="prods-title text-center mb-5 pt-3">
+      <h2 className="prods-title text-center mb-5 pt-4">
         <b>{caps_first_letter(title)}</b>
         <hr className="h-line bar" />
       </h2>

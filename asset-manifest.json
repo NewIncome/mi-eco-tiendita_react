@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mi-eco-tiendita_react/static/css/main.03b280f6.css",
-    "main.js": "/mi-eco-tiendita_react/static/js/main.5d8fc7e0.js",
+    "main.js": "/mi-eco-tiendita_react/static/js/main.f3a330b4.js",
     "static/js/787.70a2a2f7.chunk.js": "/mi-eco-tiendita_react/static/js/787.70a2a2f7.chunk.js",
     "static/media/var-07.jpg": "/mi-eco-tiendita_react/static/media/var-07.bf1d0a3d2bc8b568cc2b.jpg",
     "static/media/var-02.jpeg": "/mi-eco-tiendita_react/static/media/var-02.7c299f08190b4eedff45.jpeg",
@@ -11,11 +11,11 @@
     "static/media/var-04.jpeg": "/mi-eco-tiendita_react/static/media/var-04.58485a6038811a779cad.jpeg",
     "index.html": "/mi-eco-tiendita_react/index.html",
     "main.03b280f6.css.map": "/mi-eco-tiendita_react/static/css/main.03b280f6.css.map",
-    "main.5d8fc7e0.js.map": "/mi-eco-tiendita_react/static/js/main.5d8fc7e0.js.map",
+    "main.f3a330b4.js.map": "/mi-eco-tiendita_react/static/js/main.f3a330b4.js.map",
     "787.70a2a2f7.chunk.js.map": "/mi-eco-tiendita_react/static/js/787.70a2a2f7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.03b280f6.css",
-    "static/js/main.5d8fc7e0.js"
+    "static/js/main.f3a330b4.js"
   ]
 }

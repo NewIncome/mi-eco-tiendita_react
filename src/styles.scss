@@ -391,7 +391,8 @@
 .whatsapp {
   position: fixed;
   bottom: 0;
-  margin: 20px;
+  right: 0;
+  margin: 40px 30px;
   z-index: 1;
 
   .whats-link {
@@ -435,6 +436,28 @@
   .also-prod-name {
     display: flex;
     flex-direction: column;
+  }
+}
+
+.contact {
+  .form-div {
+    max-width: 640px;
+    margin: auto;
+    padding-bottom: 50px;
+
+    .custom-control {
+      float: right;
+      margin-top: -8px;
+    }
+
+    .text-area { min-height: 80px; }
+
+    .btn {
+      display: block;
+      font-size: 1.6rem !important;
+      margin: 60px auto;
+      padding: 10px 34px !important;
+    }
   }
 }
 

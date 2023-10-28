@@ -10,7 +10,7 @@ import {
 import { Link } from 'react-router-dom';
 import { useEffect } from "react";
 
-const Product = props => {
+const Product = () => {
   const [prod, alsoProds] = useLoaderData();
 
   useEffect(() => {

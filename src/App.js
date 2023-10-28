@@ -4,6 +4,7 @@ import ErrorPage from './pages/ErrorPage';
 import Products from './pages/Products';
 import Product from './components/Product';
 import Catalog from './pages/Catalog';
+import Contact from './pages/Contact';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 import { getProductsList, getProdsRandom, PRODUCTS } from './products';
 
@@ -19,6 +20,10 @@ const router = createHashRouter([
       {
         path: '/catalogo',
         element: <Catalog productsList={PRODUCTS} />
+      },
+      {
+        path: '/contacto',
+        element: <Contact />
       },
       {
         path: '/jabones',

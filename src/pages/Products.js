@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom';
 import { caps_first_letter } from '../utils';
+import { useEffect } from 'react';
 
 const Products = props => {
   const [products, title] = [props.products, props.title];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [products]);
   
   return (
     <>

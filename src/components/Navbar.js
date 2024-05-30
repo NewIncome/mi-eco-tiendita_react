@@ -12,7 +12,9 @@ const Navbar = () =>
         <div className="collapse navbar-collapse flex-grow-0" id="navbarTogglerDemo03">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item" key="li1">
-              <a className="nav-link" href="#Section4">Catálogo<span className="sr-only">(current)</span></a>
+              <Link className="nav-link" to="/catalogo">
+                Catálogo<span className="sr-only">(current)</span>
+              </Link>
             </li>
             <li className="nav-item dropdown" key="li2">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -8,9 +8,14 @@ import {
   PinterestShareButton
 } from "react-share";
 import { Link } from 'react-router-dom';
+import { useEffect } from "react";
 
 const Product = props => {
   const [prod, alsoProds] = useLoaderData();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [prod]);
 
   return (
       <>
